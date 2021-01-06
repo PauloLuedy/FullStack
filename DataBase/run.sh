@@ -46,7 +46,7 @@ docker run \
 printf " ${green} Baixando mongoDB ......................... ${NC}\n"
 docker run \
     --name mongoclient \
-    -p 3000:3000 \
+    -p 3006:3006 \
     --link mongodb:mongodb \
     -d \
     mongoclient/mongoclient

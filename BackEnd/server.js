@@ -1,16 +1,17 @@
 const express = require('express')
 const app = express()
-const port = 3001
+const port = 8080
+const cors = require('cors');
 const bodyParser = require('body-parser')
 const MongoDb = require('./src/db/strategies/mongodb/mongoDbStrategy')
 const HeroSchema = require('./src/db/strategies/mongodb/schemas/heroSchema')
 const HeroiSchema = require('./src/db/strategies/postgres/schemas/heroiSchema')
 const PostgresStrategy = require('./src/db/strategies/postgres/postgresSQLStrategy');
-
 const Context = require('./src/db/strategies/base/contextStrategy')
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+app.use(cors())
 
 app.get('/', (req, res) => {
     res.send('Hello World!')
