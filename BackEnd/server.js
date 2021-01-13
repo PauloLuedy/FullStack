@@ -13,8 +13,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cors())
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
+app.get('/Health', (req, res) => {
+    res.send('Health')
 })
 //mongodb
 app.post('/herois', async (req, res) => {

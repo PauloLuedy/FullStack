@@ -25,9 +25,8 @@ Execute os comandos abaixo
 
 5. cd /home/stark/Desktop/FullStack/DataBase
 
-   bash create-user.sh
-
 6. Abra http://localhost:3000/
+   disconnect
    conection name = mongodb-readWrite
    host/port = mongodb
    Database name = herois
